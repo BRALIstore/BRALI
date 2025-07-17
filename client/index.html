@@ -4,39 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRALI - Ropa Deportiva Premium</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/inddex.css">
     <link rel="stylesheet" href="css/talle.css">
+    <link rel="stylesheet" href="css/celular.css">
 
 
 </head>
 <body>
     <!-- Header -->
-<header class="header">
-    <nav class="nav">
-        <a href="#home" class="logo">BRALI</a>
-        <ul class="nav-links">
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Nosotros</a></li>
-            <li class="dropdown">
-                <a href="#products">Productos</a>
-                <div class="dropdown-content">
-                    <a href="#categoria1">Catsuit </a>
-                    <a href="#categoria2">Short </a>
-                    <a href="#categoria3">Calzas </a>
-                    <a href="#categoria4">Tops </a>
-                    <a href="#categoria5">Conjuntos </a>
-                    <a href="#categoria6">Pollera</a>
-                    <a href="#categoria7">Remerones</a>
-                    
+    <header class="header">
+        <nav class="nav">
+            <a href="#home" class="logo">BRALI</a>
+            <div class="nav-right">
+                <!-- Menú hamburguesa (solo móvil) -->
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </li>
-            <li><a href="#contact">Contacto</a></li>
-            <li class="cart-icon" onclick="toggleCart()">
-                🛒 <span class="cart-count" id="cartCount">0</span>
-            </li>
-        </ul>
-    </nav>
-</header>
+                
+                <!-- Menú navegación -->
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Inicio</a></li>
+                    <li><a href="#about">Nosotros</a></li>
+                    <li class="dropdown">
+                        <a href="#products">Productos</a>
+                        <div class="dropdown-content">
+                            <a href="#categoria1">Catsuit</a>
+                            <a href="#categoria2">Short</a>
+                            <a href="#categoria3">Calzas</a>
+                            <a href="#categoria4">Tops</a>
+                            <a href="#categoria5">Conjuntos</a>
+                            <a href="#categoria6">Pollera</a>
+                            <a href="#categoria7">Remerones</a>
+                        </div>
+                    </li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+                
+                <!-- Carrito -->
+                <div class="cart-icon" onclick="toggleCart()">
+                    🛒 <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -59,7 +71,7 @@
         <div class="products-grid">
             
             <!-- CALZAS  KENZO-->
-            <div class="product-card scroll-reveal">
+            <div id="categoria3" class="product-card scroll-reveal">
                 <div class="product-image">
                     <img src="img/productos/CALZAS/1.jpg" alt="Camiseta Deportiva Brali">
                 </div>
@@ -79,7 +91,7 @@
                 </div>
             </div>
 
-            <div class="product-card scroll-reveal">
+            <div id="products" class="product-card scroll-reveal">
                 <div class="product-image">
                     <img src="img/productos/CALZAS/3.jpg" alt="Camiseta Deportiva Brali">
                 </div>
