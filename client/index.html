@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BRALI - Ropa Deportiva Premium</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/talle.css">
+
+
+</head>
+<body>
+    <!-- Header -->
+<header class="header">
+    <nav class="nav">
+        <a href="#home" class="logo">BRALI</a>
+        <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Nosotros</a></li>
+            <li class="dropdown">
+                <a href="#products">Productos</a>
+                <div class="dropdown-content">
+                    <a href="#categoria1">Catsuit </a>
+                    <a href="#categoria2">Short </a>
+                    <a href="#categoria3">Calzas </a>
+                    <a href="#categoria4">Tops </a>
+                    <a href="#categoria5">Conjuntos </a>
+                    <a href="#categoria6">Pollera</a>
+                    <a href="#categoria7">Remerones</a>
+                    
+                </div>
+            </li>
+            <li><a href="#contact">Contacto</a></li>
+            <li class="cart-icon" onclick="toggleCart()">
+                🛒 <span class="cart-count" id="cartCount">0</span>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>BRALI</h1>
+            <p>Ropa Deportiva Premium</p>
+            <a href="#products" class="cta-button">EXPLORAR COLECCIÓN</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about scroll-reveal">
+        <h2>NUESTRA FILOSOFÍA</h2>
+        <p>En Brali creemos que el rendimiento y el estilo van de la mano. Diseñamos ropa deportiva premium que combina funcionalidad superior con estética minimalista. Cada prenda está pensada para acompañarte en tu máximo rendimiento, sin comprometer tu estilo personal.</p>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products"  class="products">
+        <h2>COLECCIÓN Calzas</h2>
+        <div class="products-grid">
+            
+            <!-- CALZAS  KENZO-->
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/1.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Kenzo </h3>
+                    <p>Violeta </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$690.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 690000, 'img/productos/CALZAS/1.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/3.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Kenzo </h3>
+                    <p>Verde oliva </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$690.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 690000, 'img/productos/CALZAS/3.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/5.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Kenzo </h3>
+                    <p>Gris oscuro </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$690.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 690000, 'img/productos/CALZAS/5.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/7.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Kenzo </h3>
+                    <p>Rosa chicle </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$690.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 690000, 'img/productos/CALZAS/7.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/9.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Kenzo </h3>
+                    <p>Rojito </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$690.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 690000, 'img/productos/CALZAS/9.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/11.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Kenzo </h3>
+                    <p>Turquesa </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$690.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 690000, 'img/productos/CALZAS/11.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+
+            <!-- CALZAS  VENECIA-->
+
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/13.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Venecia</h3>
+                    <p>Gris oscura </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$890.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 890000, 'img/productos/CALZAS/13.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/15.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Venecia</h3>
+                    <p>Rojo </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$890.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 890000, 'img/productos/CALZAS/15.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/17.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Venecia</h3>
+                    <p>Gris claro  </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$890.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 890000, 'img/productos/CALZAS/17.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/19.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Venecia</h3>
+                    <p>Verde claro </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box available">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$890.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 890000, 'img/productos/CALZAS/19.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/21.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Venecia</h3>
+                    <p>Marrón chocolate </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$890.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 890000, 'img/productos/CALZAS/21.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+
+            <!-- CALZAS  Smooth en V -->
+
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/22.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Smooth en V </h3>
+                    <p>Verde </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box unavailable">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$890.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 890000, 'img/productos/CALZAS/22.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/24.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Smooth en V </h3>
+                    <p>Arena </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box available">S</div>
+                    <div class="size-box unavailable">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$890.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 890000, 'img/productos/CALZAS/24.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/26.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Smooth en V </h3>
+                    <p>Azul </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$890.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 890000, 'img/productos/CALZAS/26.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/28.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Calza Smooth en V </h3>
+                    <p>Gris oscura  </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box unavailable">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$890.000</div>
+                    <button class="buy-btn" onclick="addToCart('Calza Kenzo', 890000, 'img/productos/CALZAS/28.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    
+        
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>¿POR QUÉ BRALI?</h2>
+        <div class="features-grid">
+            <div class="feature scroll-reveal">
+                <div class="feature-icon">01</div>
+                <h3>CALIDAD PREMIUM</h3>
+                <p>Materiales de primera calidad que garantizan durabilidad y comfort superior en cada uso.</p>
+            </div>
+            <div class="feature scroll-reveal">
+                <div class="feature-icon">02</div>
+                <h3>DISEÑO MINIMALISTA</h3>
+                <p>Estética limpia y elegante que se adapta tanto al gimnasio como a la vida urbana.</p>
+            </div>
+            <div class="feature scroll-reveal">
+                <div class="feature-icon">03</div>
+                <h3>TECNOLOGÍA AVANZADA</h3>
+                <p>Diseñadas para adaptarse perfectamente a tu cuerpo, nuestras prendas ofrecen libertad de movimiento, resistencia y funcionalidad en cada entrenamiento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>CONTACTO</h2>
+        <div class="contact-info scroll-reveal">
+            <p><strong>Email:</strong> info@brali.com</p>
+            <p><strong>Teléfono:</strong> +598 91 656 999</p>
+            <p><strong>Dirección:</strong> Montevideo, Buceo</p>
+            <p><strong>Horarios:</strong> No horario fijo</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+        <div class="logo">BRALI</div>
+        <div class="social-links">
+            <a href="https://www.instagram.com/brali.uy/" target="_blank" class="social-button">Instagram</a>
+            <a href="https://wa.me/59891656999" target="_blank" class="social-button">WhatsApp</a>
+        </div>
+        <p>&copy; 2025 Brali. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+ <!-- Cart Sidebar -->
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h2>CARRITO</h2>
+        <button class="cart-close" onclick="toggleCart()">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <!-- Los items del carrito se agregarán aquí -->
+    </div>
+    <div class="cart-total">
+        <div class="total-amount" id="totalAmount">$0</div>
+        <button id="mercadopagoBtn" onclick="checkoutMercadoPago()" class="mp-button">
+  <img src="img/logomp.png" alt="Mercado Pago" class="mp-logo">
+  PAGAR CON MERCADO PAGO +10%
+</button>
+
+        <div id="wallet_container"></div>
+
+        <button class="checkout-btn" style="background: #25d366;" onclick="checkoutWhatsApp()">PAGAR POR WHATSAPP</button>
+    </div>
+
+    <!-- ← Aquí agregamos el contenedor de MercadoPago → -->
+    <div id="wallet_container" style="display: none; margin-top: 1rem;"></div>
+</div>
+
+
+    <!-- MercadoPago Checkout -->
+    <div id="mercadopagoCheckout" style="display: none;">
+        <div id="wallet_container"></div>
+    </div>
+
+<script>
+ // Variables globales
+let cart = [];
+let isCartOpen = false;
+
+// Funciones del carrito
+function addToCart(name, price, image) {
+    const existingItem = cart.find(item => item.name === name);
+    
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({
+            name: name,
+            price: price,
+            image: image,
+            quantity: 1
+        });
+    }
+    
+    updateCartUI();
+    showCartAnimation();
+}
+
+function removeFromCart(name) {
+    cart = cart.filter(item => item.name !== name);
+    updateCartUI();
+}
+
+function updateQuantity(name, change) {
+    const item = cart.find(item => item.name === name);
+    if (item) {
+        item.quantity += change;
+        if (item.quantity <= 0) {
+            removeFromCart(name);
+        } else {
+            updateCartUI();
+        }
+    }
+}
+
+function updateCartUI() {
+    const cartCount = document.getElementById('cartCount');
+    const cartItems = document.getElementById('cartItems');
+    const totalAmount = document.getElementById('totalAmount');
+    
+    // Actualizar contador
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    cartCount.textContent = totalItems;
+    cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
+    
+    // Actualizar lista de items
+    cartItems.innerHTML = '';
+    let total = 0;
+    
+    if (cart.length === 0) {
+        cartItems.innerHTML = '<div class="empty-cart">Tu carrito está vacío</div>';
+        totalAmount.textContent = '$0';
+        return;
+    }
+    
+    cart.forEach(item => {
+        total += item.price * item.quantity;
+        
+        const cartItem = document.createElement('div');
+        cartItem.className = 'cart-item';
+        cartItem.innerHTML = `
+            <img src="${item.image}" alt="${item.name}">
+            <div class="cart-item-info">
+                <div class="cart-item-name">${item.name}</div>
+                <div class="cart-item-price">$${item.price.toLocaleString()}</div>
+                <div class="cart-item-controls">
+                    <button class="quantity-btn" onclick="updateQuantity('${item.name}', -1)">-</button>
+                    <span>${item.quantity}</span>
+                    <button class="quantity-btn" onclick="updateQuantity('${item.name}', 1)">+</button>
+                    <button class="remove-btn" onclick="removeFromCart('${item.name}')">Eliminar</button>
+                </div>
+            </div>
+        `;
+        cartItems.appendChild(cartItem);
+    });
+    
+    totalAmount.textContent = `$${total.toLocaleString()}`;
+}
+
+function toggleCart() {
+    const cartSidebar = document.getElementById('cartSidebar');
+    const overlay = document.getElementById('overlay');
+    
+    isCartOpen = !isCartOpen;
+    
+    if (isCartOpen) {
+        cartSidebar.classList.add('open');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    } else {
+        cartSidebar.classList.remove('open');
+        overlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function showCartAnimation() {
+    const cartIcon = document.querySelector('.cart-icon');
+    cartIcon.style.transform = 'scale(1.2)';
+    setTimeout(() => {
+        cartIcon.style.transform = 'scale(1)';
+    }, 200);
+}
+
+// Función para checkout por WhatsApp
+function checkoutWhatsApp() {
+    if (cart.length === 0) {
+        alert('El carrito está vacío');
+        return;
+    }
+
+    let message = "¡Hola! Me interesa comprar los siguientes productos:\n\n";
+    let total = 0;
+
+    cart.forEach(item => {
+        message += `• ${item.name} x${item.quantity} - $${(item.price * item.quantity).toLocaleString()}\n`;
+        total += item.price * item.quantity;
+    });
+
+    message += `\n*Total: $${total.toLocaleString()}*\n\n¿Podrían confirmarme la disponibilidad y forma de pago?`;
+
+    const whatsappUrl = `https://wa.me/59891656999?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+}
+
+// Navegación suave
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+
+// Efecto de scroll en el header
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.98)';
+        header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+    } else {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+        header.style.boxShadow = 'none';
+    }
+});
+
+// Animaciones de scroll reveal
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.scroll-reveal').forEach(el => {
+    observer.observe(el);
+});
+
+// Efectos hover en productos
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-10px) scale(1.02)';
+    });
+    
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'translateY(0) scale(1)';
+    });
+});
+
+// Fade in inicial
+window.addEventListener('load', () => {
+    document.body.style.opacity = '1';
+});
+
+// Cerrar carrito con ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && isCartOpen) {
+        toggleCart();
+    }
+});
+
+  async function checkoutMercadoPago() {
+  if (cart.length === 0) {
+    alert('El carrito está vacío');
+    return;
+  }
+
+  const btn = document.getElementById('mercadopagoBtn');
+  btn.textContent = 'Redirigiendo…';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('/create-preference', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ cart })
+    });
+
+    const data = await res.json();
+
+    if (data.preferenceId) {
+      const initPoint = `https://www.mercadopago.com.uy/checkout/v1/redirect?pref_id=${data.preferenceId}`;
+      window.location.href = initPoint;
+    } else {
+      throw new Error('No se generó preferencia');
+    }
+  } catch (err) {
+    alert('Error al iniciar pago: ' + err.message);
+    btn.textContent = 'PAGAR CON MERCADOPAGO';
+    btn.disabled = false;
+  }
+}
+
+// Estilos CSS integrados
+const style = document.createElement('style');
+style.textContent = `
+    .cart-item {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+    
+    .cart-item img {
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+        object-fit: cover;
+        margin-right: 15px;
+    }
+    
+    .cart-item-info {
+        flex: 1;
+    }
+    
+    .cart-item-name {
+        font-weight: 600;
+        margin-bottom: 5px;
+    }
+    
+    .cart-item-price {
+        color: #666;
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+    
+    .cart-item-controls {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .quantity-btn {
+        width: 25px;
+        height: 25px;
+        border: 1px solid #ddd;
+        background: white;
+        border-radius: 3px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+    }
+    
+    .quantity-btn:hover {
+        background: #f5f5f5;
+    }
+    
+    .remove-btn {
+        background: #ff4444;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 12px;
+    }
+    
+    .remove-btn:hover {
+        background: #cc0000;
+    }
+    
+    .empty-cart {
+        text-align: center;
+        padding: 50px 20px;
+        color: #999;
+    }
+    
+    .cart-sidebar.open {
+        transform: translateX(0);
+    }
+    
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .cart-count {
+        background: #000;
+        color: white;
+        border-radius: 50%;
+        padding: 2px 6px;
+        font-size: 12px;
+        min-width: 18px;
+        height: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5px;
+    }
+    
+    .scroll-reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.6s ease;
+    }
+    
+    .scroll-reveal.revealed {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .cart-icon {
+        transition: transform 0.2s ease;
+    }
+`;
+
+document.head.appendChild(style);
+
+ </script>
+
+<!-- SDK Oficial de Mercado Pago -->
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+<script>
+  // Inicializa el cliente con tu Public Key (no el access token)
+  const mp = new MercadoPago(
+    'APP_USR-203d94f1-8994-4c2e-97cf-9b3185459628',
+    { locale: 'es-UY' }
+  );
+</script>
+
+
+    <script src="../server/server.js"></script>
+    <script src="../server/package-lock.json"></script>
+    <script src="../server/package.json"></script>
+
+
+
+</body>
+</html>
