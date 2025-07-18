@@ -17,10 +17,11 @@
             <a href="#home" class="logo">BRALI</a>
             <div class="nav-right">
                 <!-- Menú hamburguesa (solo móvil) -->
-                <div class="hamburger" onclick="toggleMenu()">
+                <div class="hamburger" id="hamburger" onclick="toggleMenu()">
                     <span></span>
                     <span></span>
                     <span></span>
+                    
                 </div>
                 
                 <!-- Menú navegación -->
@@ -28,7 +29,7 @@
                     <li><a href="#home">Inicio</a></li>
                     <li><a href="#about">Nosotros</a></li>
                     <li class="dropdown">
-                        <a href="#products">Productos</a>
+                        <a href="#prdoducts">Productos</a>
                         <div class="dropdown-content">
                             <a href="#categoria1">Catsuit</a>
                             <a href="#categoria2">Short</a>
@@ -41,7 +42,7 @@
                     </li>
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
-                
+                <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
                 <!-- Carrito -->
                 <div class="cart-icon" onclick="toggleCart()">
                     🛒 <span class="cart-count" id="cartCount">0</span>
@@ -65,8 +66,8 @@
         <p>En Brali creemos que el rendimiento y el estilo van de la mano. Diseñamos ropa deportiva premium que combina funcionalidad superior con estética minimalista. Cada prenda está pensada para acompañarte en tu máximo rendimiento, sin comprometer tu estilo personal.</p>
     </section>
 
-    <!-- Products Section -->
-    <section id="products"  class="products">
+    <!-- Products Section Calzas-->
+    <section   class="products">
         <h2>COLECCIÓN Calzas</h2>
         <div class="products-grid">
             
@@ -367,11 +368,519 @@
                     </button>
                 </div>
             </div>
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/32.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3> Calza yoga </h3>
+                    <p>Camell   </p>
+                    <div class="sizes">
+                    <div class="size-box available">XL</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box unavailable">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$790.000</div>
+                    <button class="buy-btn" onclick="addToCart(' Calza yoga', 790000, 'img/productos/CALZAS/32.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/33.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3> Calza yoga </h3>
+                    <p>Gris   </p>
+                    <div class="sizes">
+                    <div class="size-box available">XL</div>
+                    <div class="size-box available">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$790.000</div>
+                    <button class="buy-btn" onclick="addToCart(' Calza yoga', 790000, 'img/productos/CALZAS/33.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/30.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3> Batik primer línea </h3>
+                    <p>Talle único    </p>
+                    <div class="sizes">
+                    <div class="size-box available"></div>
+                    <div class="size-box available"></div>
+                    <div class="size-box available"></div>
+                    <div class="size-box available"></div>
+                </div>
+                    <div class="price">$390.000</div>
+                    <button class="buy-btn" onclick="addToCart('Batik primer línea', 390000, 'img/productos/CALZAS/30.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CALZAS/31.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3> Calza batik primer línea  </h3>
+                    <p>Talle único    </p>
+                    <div class="sizes">
+                    <div class="size-box available"></div>
+                    <div class="size-box available"></div>
+                    <div class="size-box available"></div>
+                    <div class="size-box available"></div>
+                </div>
+                    <div class="price">$390.000</div>
+                    <button class="buy-btn" onclick="addToCart('Batik primer línea', 390000, 'img/productos/CALZAS/31.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+
 
         </div>
     </section>
-    
-        
+    <!-- Products Section Tops -->
+    <section   class="products">
+        <h2>COLECCIÓN Tops</h2>
+        <div class="products-grid">
+            
+            <!-- CALZAS  sagras-->
+            <div id="categoria4" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/TOPS/1.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Tops sagras  </h3>
+                    <p> </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$890.000</div>
+                    <button class="buy-btn" onclick="addToCart('Tops sagras', 890000, 'img/productos/TOPS/1.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </section>  
+    <!-- Products Section Short -->
+    <section   class="products">
+        <h2>COLECCIÓN Short</h2>
+        <div class="products-grid">
+            
+            <!-- CALZAS  sagras-->
+            <div id="categoria2" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/SHORTS/1.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Short batik rosa  </h3>
+                    <p>Rosa </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box available">S</div>
+                    <div class="size-box unavailable">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$449.000</div>
+                    <button class="buy-btn" onclick="addToCart('Short batik rosa', 449000, 'img/productos/SHORTS/1.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div id="categoria3" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/SHORTS/2.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Batik mostaza  </h3>
+                    <p>Mostaza </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$449.000</div>
+                    <button class="buy-btn" onclick="addToCart('Batik mostaza ', 449000, 'img/productos/SHORTS/2.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div id="categoria3" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/SHORTS/3.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Batik Gris oscuro  </h3>
+                    <p>Oscuro </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$449.000</div>
+                    <button class="buy-btn" onclick="addToCart('Gris oscuro ', 449000, 'img/productos/SHORTS/3.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div id="categoria3" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/SHORTS/4.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Batik Verde </h3>
+                    <p>Verde </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$449.000</div>
+                    <button class="buy-btn" onclick="addToCart('Batik Verde ', 449000, 'img/productos/SHORTS/4.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div id="categoria3" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/SHORTS/5.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Turquesa </h3>
+                    <p> </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$449.000</div>
+                    <button class="buy-btn" onclick="addToCart('Batik Turquesa ', 449000, 'img/productos/SHORTS/5.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+             <div id="categoria3" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/SHORTS/6.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Morado </h3>
+                    <p> </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$449.000</div>
+                    <button class="buy-btn" onclick="addToCart('Batik Morado ', 449000, 'img/productos/SHORTS/6.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div id="categoria3" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/SHORTS/7.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Azul </h3>
+                    <p> </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$449.000</div>
+                    <button class="buy-btn" onclick="addToCart('Batik Azul ', 449000, 'img/productos/SHORTS/7.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div id="categoria3" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/SHORTS/8.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Celeste </h3>
+                    <p> </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$449.000</div>
+                    <button class="buy-btn" onclick="addToCart('Batik Celeste ', 449000, 'img/productos/SHORTS/8.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div id="categoria3" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/SHORTS/9.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Biker Francia  </h3>
+                    <p> Rosada</p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box unavailable">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$590.000</div>
+                    <button class="buy-btn" onclick="addToCart('Biker Francia ', 590000, 'img/productos/SHORTS/9.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+             <div id="categoria3" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/SHORTS/11.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Biker Francia  </h3>
+                    <p> Gris claro</p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box unavailable">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$590.000</div>
+                    <button class="buy-btn" onclick="addToCart('Biker Francia ', 590000, 'img/productos/SHORTS/11.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>  
+    <!-- Products Section Tops Catsuit -->
+    <section   class="products">
+        <h2>COLECCIÓN Catsuit </h2>
+        <div class="products-grid">
+            
+            <!-- CALZAS  sagras-->
+            <div id="categoria1" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CATSUIT/3.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Catsuit Zamora  </h3>
+                    <p> </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$990.000</div>
+                    <button class="buy-btn" onclick="addToCart('Catsuit Zamora', 990000, 'img/productos/CATSUIT/3.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div id="categoria3" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CATSUIT/4.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Catsuit Madrid   </h3>
+                    <p> </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box available">S</div>
+                    <div class="size-box unavailable">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$599.000</div>
+                    <button class="buy-btn" onclick="addToCart('Catsuit Zamora', 599000, 'img/productos/CATSUIT/4.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div id="categoria3" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CATSUIT/1.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Catsuit bassic    </h3>
+                    <p> Color rosa chicle </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box available">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$690.000</div>
+                    <button class="buy-btn" onclick="addToCart('Catsuit bassic ', 690000, 'img/productos/CATSUIT/1.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div id="categoria3" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CATSUIT/2.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Catsuit bassic    </h3>
+                    <p> Gris oscuro </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box available">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$690.000</div>
+                    <button class="buy-btn" onclick="addToCart('Catsuit bassic ', 690000, 'img/productos/CATSUIT/2.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+    <!-- Products Section Remerones -->
+    <section   class="products">
+        <h2>COLECCIÓN Remerones</h2>
+        <div class="products-grid">
+            
+            <!-- Remerones-->
+            <div id="categoria7" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/REMERONES/1.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Remera Brali   </h3>
+                    <p>Ángel  </p>
+                    <div class="sizes">
+                    <div class="size-box available">XL</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$790.000</div>
+                    <button class="buy-btn" onclick="addToCart('Remera Brali', 790000, 'img/productos/REMERONES/1.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+
+            
+
+        </div>
+    </section> 
+    <!-- Products Section CONJUNTOS -->
+    <section   class="products">
+        <h2>COLECCIÓN Conjuntos</h2>
+        <div class="products-grid">
+            
+            <!-- CONJUNTOS-->
+            <div id="categoria5" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CONJUNTOS/1.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Conjunto Marbella </h3>
+                    <p>Marbella </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box available">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$890.000</div>
+                    <button class="buy-btn" onclick="addToCart('Conjunto Marbella ', 890000, 'img/productos/CONJUNTOS/1.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div id="categoria4" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CONJUNTOS/2.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3> Set bahía </h3>
+                    <p>Conjunto </p>
+                    <div class="sizes">
+                    <div class="size-box available">XS</div>
+                    <div class="size-box available">S</div>
+                    <div class="size-box unavailable">M</div>
+                    <div class="size-box unavailable">L</div>
+                </div>
+                    <div class="price">$890.000</div>
+                    <button class="buy-btn" onclick="addToCart('Conjunto Set bahía ', 890000, 'img/productos/CONJUNTOS/2.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div id="categoria4" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CONJUNTOS/3.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3> Conjunto Smooth  </h3>
+                    <p>Rosado  </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$690.000</div>
+                    <button class="buy-btn" onclick="addToCart('Conjunto Smooth  ', 690000, 'img/productos/CONJUNTOS/3.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+            <div id="categoria4" class="product-card scroll-reveal">
+                <div class="product-image">
+                    <img src="img/productos/CONJUNTOS/4.jpg" alt="Camiseta Deportiva Brali">
+                </div>
+                <div class="product-info">
+                    <h3>Conjunto Smooth  </h3>
+                    <p>Gris claro   </p>
+                    <div class="sizes">
+                    <div class="size-box unavailable">XS</div>
+                    <div class="size-box unavailable">S</div>
+                    <div class="size-box available">M</div>
+                    <div class="size-box available">L</div>
+                </div>
+                    <div class="price">$690.000</div>
+                    <button class="buy-btn" onclick="addToCart('Conjunto Smooth  ', 690000, 'img/productos/CONJUNTOS/4.jpg')">
+                        AGREGAR AL CARRITO
+                    </button>
+                </div>
+            </div>
+ 
+
+        </div>
+    </section>
 
     <!-- Features Section -->
     <section class="features">
@@ -453,11 +962,14 @@
     </div>
 
 <script>
- // Variables globales
+// Variables globales
 let cart = [];
 let isCartOpen = false;
+let menuOpen = false;
+let dropdownOpen = false;
 
-// Funciones del carrito
+// ================ FUNCIONES DEL CARRITO ================
+
 function addToCart(name, price, image) {
     const existingItem = cart.find(item => item.name === name);
     
@@ -497,6 +1009,12 @@ function updateCartUI() {
     const cartCount = document.getElementById('cartCount');
     const cartItems = document.getElementById('cartItems');
     const totalAmount = document.getElementById('totalAmount');
+    
+    // Verificar que los elementos existan
+    if (!cartCount || !cartItems || !totalAmount) {
+        console.error('Elementos del carrito no encontrados en el DOM');
+        return;
+    }
     
     // Actualizar contador
     const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -541,6 +1059,11 @@ function toggleCart() {
     const cartSidebar = document.getElementById('cartSidebar');
     const overlay = document.getElementById('overlay');
     
+    if (!cartSidebar || !overlay) {
+        console.error('Elementos del carrito no encontrados');
+        return;
+    }
+    
     isCartOpen = !isCartOpen;
     
     if (isCartOpen) {
@@ -556,13 +1079,16 @@ function toggleCart() {
 
 function showCartAnimation() {
     const cartIcon = document.querySelector('.cart-icon');
-    cartIcon.style.transform = 'scale(1.2)';
-    setTimeout(() => {
-        cartIcon.style.transform = 'scale(1)';
-    }, 200);
+    if (cartIcon) {
+        cartIcon.style.transform = 'scale(1.2)';
+        setTimeout(() => {
+            cartIcon.style.transform = 'scale(1)';
+        }, 200);
+    }
 }
 
-// Función para checkout por WhatsApp
+// ================ CHECKOUT FUNCTIONS ================
+
 function checkoutWhatsApp() {
     if (cart.length === 0) {
         alert('El carrito está vacío');
@@ -583,106 +1109,221 @@ function checkoutWhatsApp() {
     window.open(whatsappUrl, '_blank');
 }
 
-// Navegación suave
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+async function checkoutMercadoPago() {
+    if (cart.length === 0) {
+        alert('El carrito está vacío');
+        return;
+    }
+
+    const btn = document.getElementById('mercadopagoBtn');
+    if (btn) {
+        btn.textContent = 'Redirigiendo…';
+        btn.disabled = true;
+    }
+
+    try {
+        const res = await fetch('/create-preference', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ cart })
+        });
+
+        const data = await res.json();
+
+        if (data.preferenceId) {
+            const initPoint = `https://www.mercadopago.com.uy/checkout/v1/redirect?pref_id=${data.preferenceId}`;
+            window.location.href = initPoint;
+        } else {
+            throw new Error('No se generó preferencia');
         }
-    });
-});
-
-// Efecto de scroll en el header
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 100) {
-        header.style.background = 'rgba(255, 255, 255, 0.98)';
-        header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
-    } else {
-        header.style.background = 'rgba(255, 255, 255, 0.95)';
-        header.style.boxShadow = 'none';
-    }
-});
-
-// Animaciones de scroll reveal
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
+    } catch (err) {
+        alert('Error al iniciar pago: ' + err.message);
+        if (btn) {
+            btn.textContent = 'PAGAR CON MERCADOPAGO';
+            btn.disabled = false;
         }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.scroll-reveal').forEach(el => {
-    observer.observe(el);
-});
-
-// Efectos hover en productos
-document.querySelectorAll('.product-card').forEach(card => {
-    card.addEventListener('mouseenter', () => {
-        card.style.transform = 'translateY(-10px) scale(1.02)';
-    });
-    
-    card.addEventListener('mouseleave', () => {
-        card.style.transform = 'translateY(0) scale(1)';
-    });
-});
-
-// Fade in inicial
-window.addEventListener('load', () => {
-    document.body.style.opacity = '1';
-});
-
-// Cerrar carrito con ESC
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && isCartOpen) {
-        toggleCart();
     }
-});
-
-  async function checkoutMercadoPago() {
-  if (cart.length === 0) {
-    alert('El carrito está vacío');
-    return;
-  }
-
-  const btn = document.getElementById('mercadopagoBtn');
-  btn.textContent = 'Redirigiendo…';
-  btn.disabled = true;
-
-  try {
-    const res = await fetch('/create-preference', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ cart })
-    });
-
-    const data = await res.json();
-
-    if (data.preferenceId) {
-      const initPoint = `https://www.mercadopago.com.uy/checkout/v1/redirect?pref_id=${data.preferenceId}`;
-      window.location.href = initPoint;
-    } else {
-      throw new Error('No se generó preferencia');
-    }
-  } catch (err) {
-    alert('Error al iniciar pago: ' + err.message);
-    btn.textContent = 'PAGAR CON MERCADOPAGO';
-    btn.disabled = false;
-  }
 }
 
-// Estilos CSS integrados
+// ================ FUNCIONES DEL MENÚ ================
+
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const hamburger = document.getElementById('hamburger');
+    const menuOverlay = document.getElementById('menuOverlay');
+    
+    if (!navLinks || !hamburger) {
+        console.error('Elementos del menú no encontrados');
+        return;
+    }
+    
+    menuOpen = !menuOpen;
+    
+    if (menuOpen) {
+        navLinks.classList.add('active');
+        hamburger.classList.add('active');
+        if (menuOverlay) menuOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    } else {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+        if (menuOverlay) menuOverlay.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        
+        if (dropdownOpen) {
+            closeDropdown();
+        }
+    }
+}
+
+function closeMenu() {
+    if (menuOpen) {
+        toggleMenu();
+    }
+}
+
+function toggleDropdown(event) {
+    if (window.innerWidth <= 768) {
+        event.preventDefault();
+        const dropdown = document.getElementById('dropdown');
+        
+        if (!dropdown) {
+            console.error('Dropdown no encontrado');
+            return;
+        }
+        
+        dropdownOpen = !dropdownOpen;
+        
+        if (dropdownOpen) {
+            dropdown.classList.add('active');
+        } else {
+            dropdown.classList.remove('active');
+        }
+    }
+}
+
+function closeDropdown() {
+    const dropdown = document.getElementById('dropdown');
+    if (dropdown) {
+        dropdown.classList.remove('active');
+        dropdownOpen = false;
+    }
+}
+
+// ================ EVENT LISTENERS ================
+
+// Navegación suave
+function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+}
+
+// Efecto de scroll en el header
+function initScrollEffect() {
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('.header');
+        if (header) {
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = 'none';
+            }
+        }
+    });
+}
+
+// Animaciones de scroll reveal
+function initScrollReveal() {
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.scroll-reveal').forEach(el => {
+        observer.observe(el);
+    });
+}
+
+// Efectos hover en productos
+function initProductHover() {
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.style.transform = 'translateY(-10px) scale(1.02)';
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = 'translateY(0) scale(1)';
+        });
+    });
+}
+
+// Event listeners adicionales
+function initEventListeners() {
+    // Cerrar menú al cambiar tamaño de ventana
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768 && menuOpen) {
+            closeMenu();
+        }
+    });
+
+    // Cerrar menú al hacer scroll
+    window.addEventListener('scroll', function() {
+        if (menuOpen && window.scrollY > 100) {
+            closeMenu();
+        }
+    });
+
+    // Cerrar carrito con ESC
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isCartOpen) {
+            toggleCart();
+        }
+    });
+
+    // Fade in inicial
+    window.addEventListener('load', () => {
+        document.body.style.opacity = '1';
+    });
+}
+
+// ================ INICIALIZACIÓN ================
+
+// Inicializar todas las funciones cuando el DOM esté cargado
+document.addEventListener('DOMContentLoaded', function() {
+    initSmoothScroll();
+    initScrollEffect();
+    initScrollReveal();
+    initProductHover();
+    initEventListeners();
+    
+    // Inicializar carrito UI
+    updateCartUI();
+    
+    console.log('JavaScript inicializado correctamente');
+});
+
+// ================ ESTILOS CSS ================
+
 const style = document.createElement('style');
 style.textContent = `
     .cart-item {
@@ -800,16 +1441,20 @@ style.textContent = `
 
 document.head.appendChild(style);
 
- </script>
+// ================ MERCADO PAGO ================
 
-<!-- SDK Oficial de Mercado Pago -->
-<script src="https://sdk.mercadopago.com/js/v2"></script>
-<script>
-  // Inicializa el cliente con tu Public Key (no el access token)
-  const mp = new MercadoPago(
-    'APP_USR-203d94f1-8994-4c2e-97cf-9b3185459628',
-    { locale: 'es-UY' }
-  );
+// SDK Oficial de Mercado Pago
+const mpScript = document.createElement('script');
+mpScript.src = 'https://sdk.mercadopago.com/js/v2';
+mpScript.onload = function() {
+    // Inicializa el cliente con tu Public Key
+    const mp = new MercadoPago(
+        'APP_USR-203d94f1-8994-4c2e-97cf-9b3185459628',
+        { locale: 'es-UY' }
+    );
+    console.log('MercadoPago SDK cargado correctamente');
+};
+document.head.appendChild(mpScript);
 </script>
 
 
