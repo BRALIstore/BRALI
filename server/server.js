@@ -6,7 +6,8 @@ const path = require('path');
 const app = express();
 
 // ConfigADA
-const MP_TOKEN = 'APP_USR-1328639708216666-062611-b443dfeafa2b4ed7c16ba1124848db7a-1886217295'; // TOKEN SECRETO
+const MP_TOKEN = process.env.MP_TOKEN;
+
 
 // Middleware
 app.use(cors());
