@@ -1,64 +1,43 @@
 const express = require('express');
-const axios = require('axios');
 const cors = require('cors');
 const path = require('path');
+const mercadopago = require('mercadopago');
 
 const app = express();
 
-// Token de Mercado Pago
-const MP_TOKEN = 'APP_USR-1328639708216666-062611-b443dfeafa2b4ed7c16ba1124848db7a-1886217295';
+// Instalar SDK v1 y luego:
+mercadopago.configure({
+  access_token: process.env.MP_ACCESS_TOKEN
+});
 
-// Middleware
+console.log('preferences existe?:', mercadopago.preferences ? 'sí' : 'NO');
+
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '../client')));
 
-// Crear preferencia de Mercado Pago
+// Ruta para crear preferencia de pago
 app.post('/create-preference', async (req, res) => {
-  const { cart } = req.body;
-
-  if (!cart || cart.length === 0) {
-    return res.status(400).json({ error: 'Carrito vacío' });
-  }
-
-  const items = cart.map(producto => {
-    const precioConRecargo = parseFloat((producto.price * 1.10).toFixed(2)); // suma 10%
-    return {
-      title: producto.name,
-      unit_price: precioConRecargo,
-      quantity: producto.quantity,
-      currency_id: 'UYU'
-    };
-  });
-
   try {
-    const response = await axios.post(
-      'https://api.mercadopago.com/checkout/preferences',
-      {
-        items,
-        back_urls: {
-          success: 'https://brali.com/success',
-          failure: 'https://brali.com/failure',
-          pending: 'https://brali.com/pending'
-        },
-        auto_return: 'approved'
-      },
-      {
-        headers: {
-          Authorization: `Bearer ${MP_TOKEN}`
-        }
-      }
-    );
+    const { cart } = req.body;
+    if (!Array.isArray(cart) || cart.length === 0)
+      return res.status(400).json({ error: 'Carrito vacío o inválido' });
 
-    res.json({ preferenceId: response.data.id });
+    const items = cart.map(i => ({
+      title: i.name,
+      quantity: Number(i.quantity),
+      unit_price: Number(i.price),
+      currency_id: 'UYU'
+    }));
+
+    const response = await mercadopago.preferences.create({ items });
+    res.json({ id: response.body.id, init_point: response.body.init_point });
   } catch (error) {
-    console.error(error.response?.data || error.message);
-    res.status(500).json({ error: 'Error al crear preferencia' });
+    console.error('Error al crear preferencia:', error);
+    res.status(500).json({ error: 'No se pudo generar la preferencia', message: error.message });
   }
 });
 
-// Iniciar servidor
-const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor en http://localhost:${PORT}`);
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor corriendo en puerto ${PORT}`));
+

@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BRALI - Ropa Deportiva Premium</title>
-    <link rel="stylesheet" href="css/inddex.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/talle.css">
     <link rel="stylesheet" href="css/celular.css">
+<script src="https://sdk.mercadopago.com/js/v2"></script>
+
+
 
 
 </head>
@@ -946,7 +949,8 @@
   PAGAR CON MERCADO PAGO +10%
 </button>
 
-        <div id="wallet_container"></div>
+
+        
 
         <button class="checkout-btn" style="background: #25d366;" onclick="checkoutWhatsApp()">PAGAR POR WHATSAPP</button>
     </div>
@@ -963,7 +967,7 @@
 
 <script>
 // Variables globales
-let cart = [];
+
 let isCartOpen = false;
 let menuOpen = false;
 let dropdownOpen = false;
@@ -1130,12 +1134,12 @@ async function checkoutMercadoPago() {
 
         const data = await res.json();
 
-        if (data.preferenceId) {
-            const initPoint = `https://www.mercadopago.com.uy/checkout/v1/redirect?pref_id=${data.preferenceId}`;
-            window.location.href = initPoint;
-        } else {
-            throw new Error('No se generó preferencia');
-        }
+       if (data.initPoint) {
+  window.location.href = data.initPoint;
+} else {
+  throw new Error('No se generó preferencia');
+}
+
     } catch (err) {
         alert('Error al iniciar pago: ' + err.message);
         if (btn) {
@@ -1440,27 +1444,102 @@ style.textContent = `
 `;
 
 document.head.appendChild(style);
+// ================ script.js mejorado ================
+
+// Importante: Definir carrito global si no existe (puede venir de otro script o storage)
+let cart = window.cart || JSON.parse(localStorage.getItem('cart')) || [];
 
 // ================ MERCADO PAGO ================
+// ⚠️ ASEGÚRATE DE QUE ESTA SEA LA ÚNICA DECLARACIÓN DE 'mp'
+const mp = new MercadoPago('APP_USR-203d94f1-8994-4c2e-97cf-9b3185459628', {
+  locale: 'es-UY'
+});
 
-// SDK Oficial de Mercado Pago
-const mpScript = document.createElement('script');
-mpScript.src = 'https://sdk.mercadopago.com/js/v2';
-mpScript.onload = function() {
-    // Inicializa el cliente con tu Public Key
-    const mp = new MercadoPago(
-        'APP_USR-203d94f1-8994-4c2e-97cf-9b3185459628',
-        { locale: 'es-UY' }
-    );
-    console.log('MercadoPago SDK cargado correctamente');
-};
-document.head.appendChild(mpScript);
+// Función para probar conexión al servidor (requiere ruta /test en servidor)
+async function testServer() {
+  try {
+    const response = await fetch(`${window.location.origin}/test`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ test: true })
+    });
+    const data = await response.json();
+    console.log('✅ Test del servidor:', data);
+  } catch (error) {
+    console.error('❌ Test del servidor falló:', error);
+  }
+}
+
+// Función principal de checkout
+async function checkoutMercadoPago() {
+  console.log('🛒 Iniciando checkout MercadoPago...');
+  console.log('Carrito actual:', cart);
+
+  // Validaciones
+  if (!Array.isArray(cart) || cart.length === 0) {
+    return alert('El carrito está vacío');
+  }
+  const invalidItems = cart.filter(item => !item.name || typeof item.price !== 'number');
+  if (invalidItems.length > 0) {
+    console.error('❌ Items inválidos en el carrito:', invalidItems);
+    return alert('Hay productos sin nombre o precio en el carrito');
+  }
+
+  const btn = document.getElementById('mercadopagoBtn');
+  const originalText = btn.textContent;
+  btn.textContent = 'Procesando...';
+  btn.disabled = true;
+
+  try {
+    console.log('📤 Enviando carrito a /create-preference...');
+    const response = await fetch(`${window.location.origin}/create-preference`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ cart })
+    });
+
+    console.log('📥 Status de respuesta:', response.status);
+    if (!response.ok) {
+      const errorText = await response.text();
+      console.error('❌ Error HTTP:', response.status, errorText);
+      let errData;
+      try { errData = JSON.parse(errorText); } catch (_) { errData = { error: errorText }; }
+      throw new Error(errData.error || `HTTP ${response.status}`);
+    }
+
+    const data = await response.json();
+    if (!data.id) throw new Error('No se recibió ID de preferencia');
+    console.log('🚀 Abriendo checkout con ID:', data.id);
+
+    mp.checkout({ preference: { id: data.id }, autoOpen: true });
+  } catch (err) {
+    console.error('💥 Error en checkout:', err);
+    alert(`Error: ${err.message}`);
+  } finally {
+    btn.textContent = originalText;
+    btn.disabled = false;
+  }
+}
+
+// Función de debug del carrito (opcional)
+function debugCart() {
+  console.group('🔍 DEBUG CARRITO');
+  console.log('Tipo:', typeof cart);
+  console.log('Es array:', Array.isArray(cart));
+  console.log('Longitud:', cart.length);
+  console.log('Contenido:', cart);
+  console.groupEnd();
+}
+
+// Opcional: Llamar testServer al cargar
+window.addEventListener('DOMContentLoaded', () => {
+  // testServer(); // Descomenta si implementas /test en backend
+});
+
 </script>
 
-
-    <script src="../server/server.js"></script>
-    <script src="../server/package-lock.json"></script>
-    <script src="../server/package.json"></script>
+   
+      <script src="script.js"></script>
 
 
 
