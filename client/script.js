@@ -2,6 +2,10 @@
 
 // Asegura que exista un carrito global (puede venir de otro script o localStorage)
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
+const precioFormateado = precio.toLocaleString('es-UY', {
+  style: 'currency',
+  currency: 'UYU',
+});
 
 // ================ MERCADO PAGO ================
 // Declaración única de 'mp'
