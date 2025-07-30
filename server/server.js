@@ -23,12 +23,16 @@ app.post('/create-preference', async (req, res) => {
     if (!Array.isArray(cart) || cart.length === 0)
       return res.status(400).json({ error: 'Carrito vacío o inválido' });
 
-    const items = cart.map(i => ({
-      title: i.name,
-      quantity: Number(i.quantity),
-      unit_price: Number(i.price),
-      currency_id: 'UYU'
-    }));
+    const items = cart.map(i => {
+  const precioConComision = Number(i.price) * 1.10; // Suma 10%
+  return {
+    title: i.name,
+    quantity: Number(i.quantity),
+    unit_price: Number(precioConComision.toFixed(2)), // Redondea a 2 decimales
+    currency_id: 'UYU'
+  };
+});
+
 
     const response = await mercadopago.preferences.create({ items });
     res.json({ id: response.body.id, init_point: response.body.init_point });
